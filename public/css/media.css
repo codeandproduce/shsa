@@ -1,0 +1,143 @@
+.logo-heading{
+  padding:0 !important;
+}
+@media(max-width:1000px){
+  .logo-heading{
+    font-size:35px;
+  }
+  ul{
+    margin:0;
+    margin-left:7vw;
+  }
+  li{
+    margin:0;
+  }
+
+}
+
+@media(max-width:800px){
+  .nav-links{
+    display:none;
+  }
+  .menu-button{
+    display:inline-block;
+  }
+
+
+  .decolines{
+    display:none;
+  }
+  .white-tint{
+    opacity:0;
+  }
+  .contain-links{
+    padding:20px;
+    width:100%;
+  }
+  .link-label{
+    padding-top:65px;
+    font-size:18px;
+  }
+  .fourth-label{
+    padding-top:55px;
+  }
+  .logo-heading{
+    font-size:32px;
+  }
+  .one-link{
+    width:35vw !important;
+    height:35vw !important;
+  }
+  .link-li{
+    width:170px !important;
+    height:170px !important;
+  }
+  .second-link{
+    margin:0;
+  }
+  .third-link{
+    margin:0;
+  }
+  .fourth-link{
+    margin:0;
+  }
+  .first-link{
+    margin:0;
+  }
+}
+
+@media(max-width:700px){
+
+  .logo-container{
+    width:90%;
+    display:block;
+    padding:20px;
+    margin:auto;
+    height:230px;
+  }
+  .logo-heading{
+    font-size:35px;
+  }
+  .secondline{
+    margin:0;
+  }
+}
+@media(max-width:500px){
+  ul{
+    margin-left:13vw;
+  }
+  br{
+    display:block;
+  }
+  .logo-heading{
+    font-size:28px;
+    text-align: center;
+  }
+  ul{
+    margin-top:-30px;
+  }
+  .link-li{
+    width:33vw !important;
+    height:33vw !important;
+  }
+  .link-label{
+    padding-top:13vw;
+    font-size:12px;
+  }
+
+
+  .mission-img{
+    width:250px;
+    height:250px;
+  }
+  .mission-statement-p{
+    padding:0 10%;
+    font-size:15px;
+  }
+  .what-we-do-des{
+    padding:0 10%;
+    font-size:15px;
+  }
+  .what-we-do-h2{
+    font-size:25px;
+  }
+
+}
+@media(max-width:400px){
+  .one-link{
+    width:60vw !important;
+    height:60vw !important;
+  }
+  ul{
+    margin-left:8vw;
+  }
+  .link-li{
+    width:37vw !important;
+    height:37vw !important;
+  }
+  .link-label{
+    padding-top:26vw;
+    font-size:20px;
+  }
+
+}

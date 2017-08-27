@@ -1,0 +1,23 @@
+ul{
+  margin-top:60vh;
+  transition: all 2s ease-in-out;
+  opacity:0;
+
+}
+.main-contain{
+  padding-bottom:0;
+}
+.main-link{
+  display:block;
+  margin:auto;
+}
+.container{
+  background-color:white;
+}
+.submit-button{
+  transition:all 250ms ease-in-out;
+}
+
+.contact-des{
+  font-size:16px;
+}

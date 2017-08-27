@@ -1,0 +1,387 @@
+*{
+  box-sizing: border-box;
+  font-family:sans-serif;
+}
+*{
+  font-family:"Avenir Next" !important;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("/public/Avenir Next.ttc");
+  src:
+  url("/Avenir Next.ttc") format("ttc");
+}
+html{
+  width:100%;
+  height:100%;
+}
+body{
+  padding:0;
+  margin:0;
+}
+.nav{
+  width:100vw;
+  position:fixed;
+  opacity:0;
+  height:100px;
+  background-color:#2e4a72;
+  transition:opacity 500ms ease-in-out;
+  z-index:100;
+}
+
+.nav-logo{
+  letter-spacing: 4px;
+  font-size:30px;
+  margin:30px;
+  margin-left:60px;
+  display:inline-block;
+}
+.nav-logo a{
+  color:white;
+  text-decoration: none;
+}
+.nav-logo a:hover{
+  opacity:0.5;
+  transition:all 250ms ease-in-out;
+}
+
+.nav-links{
+  margin-top:34px;
+  position:relative;
+  float:right;
+  margin-right:70px;
+  color:white;
+  font-weight:100;
+  font-size:20px;
+}
+.nav-links a{
+  color:white;
+  text-decoration: none;
+  margin-right:40px;
+  transition:all 150ms ease-in-out;
+}
+.nav-links a:hover{
+  color:#dedede;
+  opacity:0.8;
+}
+
+.one-menu{
+  margin-bottom:7px;
+  width:100%;
+  height:5px;
+  border-radius: 100px;
+  background-color:white;
+  display:block;
+  transition:all 500ms ease-in-out;
+}
+.menu-button{
+  display:none;
+  float:right;
+  width:40px;
+  margin-right:70px;
+  margin-top:35px;
+  height:40px;
+
+}
+.menu-button:hover{
+  opacity:0.6;
+  transition:all 250ms ease-in-out;
+  cursor:pointer;
+}
+
+.contain{
+  padding-top:40px;
+  padding-bottom:40px;
+  width:100vw;
+  height:100vh;
+  position: relative;
+}
+.logo-container{
+  height:200px;
+  width:80%;
+  margin-left:50px;
+  font-size:20px;
+  padding:30px;
+  position:relative;
+}
+.blue-tint{
+  top:0px;
+  left:0px;
+  display:block;
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color:#2e4a72;
+  opacity:0.7;
+  z-index:-1;
+}
+.logo-heading{
+  padding:0;
+  margin:0;
+  color:white;
+  font-weight:300;
+  padding-right:200px;
+  letter-spacing: 10px;
+}
+.secondline{
+  margin-left:30px;
+}
+.emphasize-letters{
+  color:#112541;
+}
+.contain-links{
+  width:80%;
+  height:calc(100vh - 240px);
+  bottom:0;
+  position:relative;
+  float:right;
+  padding:40px;
+  padding-left:40px;
+}
+ul{
+  padding:0;
+}
+li{
+  list-style: none;
+  float:left;
+  display: inline-block;
+  cursor:pointer;
+}
+.white-tint{
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  position:absolute;
+  background-color:white;
+  opacity:0.4;
+}
+.one-link{
+  width:18vw;
+  height:18vw;
+  border-radius: 300px;
+  background-color:white;
+  transition:all 250ms ease-in-out;
+  opacity:0.8;
+}
+.one-link:hover{
+  background-color:#2e4a72;
+  color:white;
+}
+.first-link{
+  margin-top:15vh;
+}
+.second-link{
+  margin-top:8vh;
+}
+.third-link{
+  margin-top:1vh;
+}
+.fourth-link{
+  margin-top:-6vh;
+}
+
+.link-label{
+  position: relative;
+  padding-top:calc(9vw - 9vw/8 - 3px);
+  font-size:calc(9vw/4);
+  width:100%;
+  font-weight:300;
+  text-align: center;
+  letter-spacing: 4px;
+}
+.fourth-label{
+  padding-top:calc(9vw - 9vw/4 - 10px);
+}
+
+
+
+.logo-container{
+  left:-100%;
+  transition:all 500ms ease-in-out;
+}
+.contain-links{
+  right:-100%;
+  transition:all 500ms ease-in-out;
+}
+
+/* 112541 is the SHSSA first letters
+  a6c4ed blue lines
+  4d76af blue rectangle but its opaque
+*/
+
+.gallery{
+  top:0px;
+  padding:0;
+  margin:0;
+  position:absolute;
+  z-index:-1;
+  width:100vw;
+  height:100vh;
+}
+.galleryitem{
+  padding:0;
+  position: absolute;
+  margin:0;
+  width:100vw;
+  height:100vh;
+  z-index:-11;
+  background-position: center -100px;
+  background-size:auto;
+  background-repeat: no-repeat;
+  background-attachment:local;
+  transition:right 2s ease-in-out;
+}
+.firstimage{
+  background-image:url('/img/bgimg.jpg');
+  right:0;
+}
+.secondimage{
+  background-image:url('/img/bgimg2.jpg');
+  right:-100%;
+}
+.thirdimage{
+  background-image:url('/img/bgimg3.jpg');
+  right:-200%;
+}
+
+/* Main- contain */
+
+.main-contain{
+  display:block;
+  position:relative;
+  width:100vw;
+  opacity:0.7;
+  padding-bottom:100px;
+
+}
+.mission-statement-contain{
+  margin-top:60px;
+  position: relative;
+}
+
+.headings{
+  width:100%;
+  color:black;
+  font-weight:300;
+  text-align: center;
+  text-transform: uppercase;
+  transition:opacity 800ms ease-in-out;
+}
+.mission-img{
+  width:400px;
+  height:400px;
+  margin:20px;
+  display:block;
+  margin:auto;
+  opacity:0;
+  transition:opacity 800ms ease-in-out;
+}
+.mission-statement{
+  opacity:0;
+  transition:opacity 800ms ease-in-out;
+}
+.mission-statement-h1{
+  margin-top:0;
+}
+.mission-statement-p{
+  font-size:20px;
+  font-weight:100;
+  color:black;
+  width:100%;
+  text-align: center;
+  padding:0 20%;
+  transition:opacity 800ms ease-in-out;
+  margin-top:30px;
+}
+.col-md-4{
+  margin-bottom:60px;
+}
+.what-we-do-contain{
+  margin-top:120px;
+  position:relative;
+}
+.what-we-do-h1{
+  margin-top:50px;
+  opacity:0;
+  transition:opacity 800ms ease-in-out, margin-top 800ms ease-in-out;
+}
+.what-we-do-row{
+  margin-top:50px;
+  opacity:0;
+  transition:opacity 800ms ease-in-out;
+}
+
+.what-we-do-h2{
+  width:100%;
+  text-align:center;
+  margin-top:100px;
+  transition:margin-top 800ms ease-in-out;
+}
+.what-we-do-des{
+  margin-top:100px;
+  width:100%;
+  padding:0 20%;
+  font-weight:100;
+  text-align: center;
+  transition:margin-top 600ms ease-in-out;
+}
+
+
+
+.footer{
+  position:relative;
+  bottom:0;
+  height:230px;
+  background-color:#2e4a72;
+  width:100%;
+}
+.wechat-contain{
+  padding-left:2px;
+  position:absolute;
+  width:60px;
+  height:60px;
+  left:50%;
+  margin-left:-30px;
+  margin-top:60px;
+  text-decoration: none;
+}
+.wechat-contain i{
+  font-size:50px;
+}
+.footer p{
+  position:absolute;
+  margin-top:150px;
+  width:100%;
+  text-align: center;
+  color:white;
+}
+
+
+br{
+  display:none;
+}
+
+
+
+.contain-menu{
+  height:calc(100vh - 100px);
+  width:100%;
+  position: fixed;
+  z-index:1000000;
+  background-color:#1c2d44;
+  right:-100%;
+  bottom:0;
+  transition: right 500ms ease-in-out;
+}
+.contain-menu-contain{
+  padding:10%;
+}
+.contain-menu-link{
+  width:100%;
+  margin-bottom:30px;
+}
+.contain-menu-contain a{
+  font-size:20px;
+  color:white;
+}

@@ -1,0 +1,66 @@
+<style>
+	.decolines{
+		display:none;
+	}
+	.container{
+		padding-top:100px;
+	}
+	.nav{
+		opacity:1;
+	}
+</style>
+<link rel="stylesheet" href="/css/gallery.css" />
+<div class="container">
+	<!-- if galleries -->
+	{{#if galleries}}
+		{{#each galleries}}
+			<h2 class="gallery-name">{{name}}</h2>
+			<div class="selected-img">
+				<img src="{{selectFirst images}}" />
+			</div>
+			<div class="select-one-contain">
+				<button class="go-gallery-button go-gallery-left"></button>
+				<div class="select-p-contain">
+					<p class="index-p current-selected-gallery-index">1</p>
+					<p class="index-p slash">/</p>
+					<p class="index-p total-gallery-index">100</p>
+				</div>
+				<button class="go-gallery-button go-gallery-right"></button>
+			</div>
+			<div class="contain-gallery-thumbnails">
+				{{#each images}}
+					<li class="li-gallery-thumbnails">
+						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
+					</li>
+					<li class="li-gallery-thumbnails">
+						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
+					</li>
+					<li class="li-gallery-thumbnails">
+						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
+					</li>
+					<li class="li-gallery-thumbnails">
+						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
+					</li>
+					<li class="li-gallery-thumbnails">
+						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
+					</li>
+					<li class="li-gallery-thumbnails">
+						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
+					</li>
+					<li class="li-gallery-thumbnails">
+						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
+					</li>
+					<li class="li-gallery-thumbnails">
+						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
+					</li>
+				{{/each}}
+			</div>
+		{{/each}}
+	{{else}}
+	<!-- else -->
+	<h3 class="text-muted">There are no image galleries yet.</h3>
+	{{/if}}
+</div>
+<script type="text/javascript">
+var gallery = true;
+</script>
