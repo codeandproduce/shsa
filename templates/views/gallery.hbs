@@ -16,42 +16,21 @@
 		{{#each galleries}}
 			<h2 class="gallery-name">{{name}}</h2>
 			<div class="selected-img">
-				<img src="{{selectFirst images}}" />
+				<img id="0-selected-image" class="selected-img-img" src="{{selectFirst images}}" />
 			</div>
 			<div class="select-one-contain">
 				<button class="go-gallery-button go-gallery-left"></button>
 				<div class="select-p-contain">
 					<p class="index-p current-selected-gallery-index">1</p>
 					<p class="index-p slash">/</p>
-					<p class="index-p total-gallery-index">100</p>
+					<p class="index-p total-gallery-index">{{howManyInGallery images}}</p>
 				</div>
 				<button class="go-gallery-button go-gallery-right"></button>
 			</div>
 			<div class="contain-gallery-thumbnails">
 				{{#each images}}
 					<li class="li-gallery-thumbnails">
-						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
-					</li>
-					<li class="li-gallery-thumbnails">
-						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
-					</li>
-					<li class="li-gallery-thumbnails">
-						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
-					</li>
-					<li class="li-gallery-thumbnails">
-						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
-					</li>
-					<li class="li-gallery-thumbnails">
-						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
-					</li>
-					<li class="li-gallery-thumbnails">
-						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
-					</li>
-					<li class="li-gallery-thumbnails">
-						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
-					</li>
-					<li class="li-gallery-thumbnails">
-						<img class="one-thumbnail" src="{{formatThumbUrl url}}" />
+						<img id="{{@index}}image" class="one-thumbnail" src="{{formatThumbUrl url}}" onclick="selectedImage('{{formatThumbUrl url}}',this)"/>
 					</li>
 				{{/each}}
 			</div>
@@ -62,5 +41,56 @@
 	{{/if}}
 </div>
 <script type="text/javascript">
-var gallery = true;
+	var gallery = true;
+</script>
+<script>
+var greatestImageIndex = 1;
+$(document).ready(function(){
+	$('#0image').toggleClass('currently-selected-thumb');
+	greatestImageIndex = parseInt($('.one-thumbnail')[$('.one-thumbnail').length-1].id.replace('image',''))+1;
+	console.log(greatestImageIndex);
+});
+ function selectedImage (url, thisthing){
+	 $('.currently-selected-thumb').removeClass('currently-selected-thumb');
+	 $('.selected-img-img').css('box-shadow','none');
+	 var indexSelected = $(thisthing)[0].id.replace('image','');
+	 var finalurl = url.replace('/upload/w_200,h_130,c_fill/',"/upload/");
+	 $('.selected-img-img').attr('src',finalurl);
+	 $('.selected-img-img').attr('id',''+indexSelected+'-selected-image');
+	 $('#'+indexSelected+'image').toggleClass('currently-selected-thumb');
+	 $('.current-selected-gallery-index').text(parseInt(indexSelected)+1);
+ }
+ $('.go-gallery-right').click(function(){
+	 rightLeftGallery('right');
+ });
+ $('.go-gallery-left').click(function(){
+	 rightLeftGallery('left');
+ });
+ function rightLeftGallery(direction){
+	 $('.currently-selected-thumb').removeClass('currently-selected-thumb');
+	 var currentSelectedIndex = $('.selected-img-img').attr('id').replace('-selected-image','');
+	 if(direction == 'right'){
+		 currentSelectedIndex++;
+	 }else{
+		 currentSelectedIndex--;
+	 }
+	 if(currentSelectedIndex == greatestImageIndex-1){
+		 $('.go-gallery-right').attr('disabled','disabled');
+	 }else{
+		 $('.go-gallery-right').removeAttr('disabled');
+	 }
+	 if(currentSelectedIndex == 0){
+		 $('.go-gallery-left').attr('disabled','disabled');
+	 }else{
+		 $('.go-gallery-left').removeAttr('disabled');
+
+	 }
+	 var nextUrl = $('#'+currentSelectedIndex+'image').attr('src').replace('/upload/w_200,h_130,c_fill/',"/upload/");
+	 console.log(nextUrl);
+	 $('.selected-img-img').attr('src',nextUrl);
+	 $('.selected-img-img').attr('id',currentSelectedIndex+'-selected-image');
+	 $('#'+currentSelectedIndex+'image').toggleClass('currently-selected-thumb');
+	 $('.current-selected-gallery-index').text(parseInt(currentSelectedIndex)+1);
+
+ }
 </script>

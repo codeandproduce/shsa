@@ -331,7 +331,7 @@ module.exports = function () {
 	}
 	_helpers.selectFirst = function(images){
 		var firstUrl = images[0].url;
-		return firstUrl.replace("/upload/","/upload/w_680,h_300,c_pad,b_white/");
+		return images[0].url;
 	}
 	_helpers.console = function(input) {
 		// for (var i=0, l=arr.length; i<l; i++) {
@@ -343,6 +343,9 @@ module.exports = function () {
 		// }
 		// console.log(input[0].images[0].url);
 		console.log(input);
+	}
+	_helpers.howManyInGallery = function(images){
+		return images.length;
 	}
 	_helpers.underscoreFormat = function (obj, underscoreMethod) {
 		return obj._[underscoreMethod].format();

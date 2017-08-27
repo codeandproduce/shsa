@@ -25,6 +25,12 @@
   display:block;
   margin:auto;
 }
+.selected-img-img{
+  max-width:680px;
+  max-height:300px;
+  display:block;
+  margin:auto;
+}
 .select-one-contain{
   position:relative;
   width:130px;
@@ -69,6 +75,9 @@
   height:130px;
   display:block;
   margin:auto;
+}
+.currently-selected-thumb{
+  box-shadow: 0 0 10px 3px #2e4a72;
 }
 /*{{#if heroImage}}
 <div class="col-sm-4 col-md-4">
