@@ -20,8 +20,8 @@
   margin:auto;
 }
 .selected-img{
-  max-width:680px;
-  max-height:400px;
+  width:680px;
+  height:400px;
   display:block;
   margin:auto;
 }

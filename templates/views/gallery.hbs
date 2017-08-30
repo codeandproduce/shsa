@@ -17,6 +17,7 @@
 			<h2 class="gallery-name">{{name}}</h2>
 			<div class="selected-img">
 				<img id="0-selected-image" class="selected-img-img" src="{{selectFirst images}}" />
+				<img class="loading" src="/img/loadwheel.png" />
 			</div>
 			<div class="select-one-contain">
 				<button class="go-gallery-button go-gallery-left"><img src="/img/gallery-arrow.jpg" /></button>
@@ -43,6 +44,22 @@
 <script type="text/javascript">
 	var gallery = true;
 </script>
+<style>
+	.loading{
+		width:100px;
+		height:100px;
+		display:none;
+		position:absolute;
+		top: 350px;
+    left: 575px;
+		animation: spin 1s infinite linear;
+	}
+	@-webkit-keyframes spin {
+			0%   {-webkit-transform: rotate(0deg)}
+			50% {-webkit-transform: rotate(-250deg)}
+			100% {-webkit-transform: rotate(-360deg)}
+	}
+</style>
 <script>
 var greatestImageIndex = 1;
 $(document).ready(function(){
@@ -82,7 +99,6 @@ $(document).ready(function(){
 		 $('.go-gallery-left').attr('disabled','disabled');
 	 }else{
 		 $('.go-gallery-left').removeAttr('disabled');
-
 	 }
 	 var nextUrl = $('#'+currentSelectedIndex+'image').attr('src').replace('/upload/w_200,h_130,c_fill/',"/upload/");
 	 console.log(nextUrl);
@@ -90,5 +106,14 @@ $(document).ready(function(){
 	 $('.selected-img-img').attr('id',currentSelectedIndex+'-selected-image');
 	 $('#'+currentSelectedIndex+'image').toggleClass('currently-selected-thumb');
 	 $('.current-selected-gallery-index').text(parseInt(currentSelectedIndex)+1);
+	 loadingImage();
  }
+ function loadingImage(){
+	 $('.selected-img-img').css('display','none');
+	 $('.loading').css('display','block');
+ }
+ $('.selected-img-img').on('load', function(){
+	 $('.selected-img-img').css('display','block');
+	 $('.loading').css('display','none');
+ });
 </script>
