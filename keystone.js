@@ -56,6 +56,8 @@ keystone.set('routes', require('./routes'));
 keystone.set('nav', {
 	galleries: 'galleries',
 	users: 'users',
+
+	// teammembers: 'teammembers'
 });
 
 // Start Keystone to connect to your database and initialise the web server

@@ -19,13 +19,13 @@
 				<img id="0-selected-image" class="selected-img-img" src="{{selectFirst images}}" />
 			</div>
 			<div class="select-one-contain">
-				<button class="go-gallery-button go-gallery-left"></button>
+				<button class="go-gallery-button go-gallery-left"><img src="/img/gallery-arrow.jpg" /></button>
 				<div class="select-p-contain">
 					<p class="index-p current-selected-gallery-index">1</p>
 					<p class="index-p slash">/</p>
 					<p class="index-p total-gallery-index">{{howManyInGallery images}}</p>
 				</div>
-				<button class="go-gallery-button go-gallery-right"></button>
+				<button class="go-gallery-button go-gallery-right"><img src="/img/gallery-arrow.jpg" /></button>
 			</div>
 			<div class="contain-gallery-thumbnails">
 				{{#each images}}
@@ -48,7 +48,6 @@ var greatestImageIndex = 1;
 $(document).ready(function(){
 	$('#0image').toggleClass('currently-selected-thumb');
 	greatestImageIndex = parseInt($('.one-thumbnail')[$('.one-thumbnail').length-1].id.replace('image',''))+1;
-	console.log(greatestImageIndex);
 });
  function selectedImage (url, thisthing){
 	 $('.currently-selected-thumb').removeClass('currently-selected-thumb');
@@ -91,6 +90,5 @@ $(document).ready(function(){
 	 $('.selected-img-img').attr('id',currentSelectedIndex+'-selected-image');
 	 $('#'+currentSelectedIndex+'image').toggleClass('currently-selected-thumb');
 	 $('.current-selected-gallery-index').text(parseInt(currentSelectedIndex)+1);
-
  }
 </script>

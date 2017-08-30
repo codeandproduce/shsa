@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="/css/connect.css" />
+
+<div class="contain">
+  <div class="gallery">
+    <div class="galleryitem firstimage"></div>
+    <div class="galleryitem secondimage"></div>
+    <div class="galleryitem thirdimage"></div>
+ </div>
+   <div class="logo-container">
+     <div class="blue-tint"></div>
+     <h1 class="logo-heading"><strong class="emphasize-letters">S</strong>HANGHAI <strong class="emphasize-letters">H</strong class="emphasize-letters">IGH-SCHOOL</h1>
+     <h1 class="logo-heading secondline"><strong class="emphasize-letters">S</strong class="emphasize-letters">OCCER <strong class="emphasize-letters">A</strong>SSOCI<br />ATION</h1>
+   </div>
+    <ul>
+        <div class="one-link main-link">
+          <h2 class="link-label">OUR TEAM</h2>
+        </div>
+    </ul>
+</div>
+
+<style>
+  h1.heading{
+    letter-spacing: 8px;
+    color:#2e4a72;
+    width:100%;
+    text-align: center;
+    margin-top:100px;
+    font-size:45px;
+  }
+  .one-member-contain{
+    padding:20px;
+    text-align: left;
+    width:400px;
+    display:block;
+    margin: auto;
+  }
+  .member-name{
+    font-size:35px;
+    margin-bottom:30px;
+  }
+  .member-image{
+    width:400px;
+    border-radius: 10px;
+    height:auto;
+    display: block;
+    margin:auto;
+  }
+  .member-des{
+    font-size:20px;
+    letter-spacing: 1px;
+    margin-top:30px;
+    font-weight:300;
+    text-align: center;
+  }
+  .row{
+    padding:30px;
+  }
+  .main-contain{
+    padding-bottom:130px;
+  }
+
+</style>
+<div class="main-contain">
+  <div class="container">
+      <h1 class="heading">OUR TEAM</h1>
+  </div>
+  <div class="row">
+    {{#each teammembers}}
+    <div class="col-md-6">
+      <div class="one-member-contain">
+        <h2 class="member-name">{{position}}: {{name}}</h2>
+        <img class="member-image" src="{{image.url}}" />
+        <p class="member-des">{{description}}</p>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+<script src="/scripts/jq-connect.js"></script>
+<script>
+	var gallery = false;
+</script>

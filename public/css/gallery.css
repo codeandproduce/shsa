@@ -21,13 +21,13 @@
 }
 .selected-img{
   max-width:680px;
-  max-height:300px;
+  max-height:400px;
   display:block;
   margin:auto;
 }
 .selected-img-img{
   max-width:680px;
-  max-height:300px;
+  max-height:400px;
   display:block;
   margin:auto;
 }
@@ -44,11 +44,24 @@
   display:inline-block;
   width:18px;
   height:18px;
-  border:1px solid black;
   padding:0;
+  border:none;
   background-color:white;
 }
+.go-gallery-left img{
+  width:18px;
+  margin-bottom:8px;
+  height:18px;
+  transform:rotate(180deg);
+
+}
+.go-gallery-right img{
+  margin-bottom:8px;
+  width:18px;
+  height:18px;
+}
 .select-p-contain{
+  margin:8px;
   opacity:0.8;
   position:relative;
   display:inline;
