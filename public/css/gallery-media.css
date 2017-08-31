@@ -1,0 +1,38 @@
+.select-one-contain{
+  width:97px;
+}
+
+@media(max-width:1000px){
+
+  .selected-img{
+    width:100%;
+  }
+  .contain-gallery-thumbnails{
+    width:100%;
+  }
+  .one-li-col{
+    height:130px;
+    position:relative;
+    margin-bottom:30px;
+  }
+  .li-gallery-thumbnails{
+    width:200px;
+    height:130px;
+    left:0;
+    right:0;
+    position:absolute;
+    display:block;
+    margin:auto;
+  }
+  .one-thumbnail{
+    display:block;
+    margin:auto;
+  }
+}
+
+@media(max-width:400px){
+  .selected-img-img{
+    width:80%;
+    height:auto;
+  }
+}

@@ -10,6 +10,7 @@
 	}
 </style>
 <link rel="stylesheet" href="/css/gallery.css" />
+<link rel="stylesheet" href="/css/gallery-media.css" />
 <div class="container">
 	<!-- if galleries -->
 	{{#if galleries}}
@@ -29,11 +30,17 @@
 				<button class="go-gallery-button go-gallery-right"><img src="/img/gallery-arrow.jpg" /></button>
 			</div>
 			<div class="contain-gallery-thumbnails">
-				{{#each images}}
-					<li class="li-gallery-thumbnails">
-						<img id="{{@index}}image" class="one-thumbnail" src="{{formatThumbUrl url}}" onclick="selectedImage('{{formatThumbUrl url}}',this)"/>
-					</li>
-				{{/each}}
+				<div class="row">
+					{{#each images}}
+					<div class="col-md-4 one-li-col">
+						<li class="li-gallery-thumbnails">
+							<img id="{{@index}}image" class="one-thumbnail" src="{{formatThumbUrl url}}" onclick="selectedImage('{{formatThumbUrl url}}',this)"/>
+						</li>
+					</div>
+
+					{{/each}}
+				</div>
+
 			</div>
 		{{/each}}
 	{{else}}
@@ -75,6 +82,8 @@ $(document).ready(function(){
 	 $('.selected-img-img').attr('id',''+indexSelected+'-selected-image');
 	 $('#'+indexSelected+'image').toggleClass('currently-selected-thumb');
 	 $('.current-selected-gallery-index').text(parseInt(indexSelected)+1);
+	 loadingImage();
+
  }
  $('.go-gallery-right').click(function(){
 	 rightLeftGallery('right');
