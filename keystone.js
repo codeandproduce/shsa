@@ -2,6 +2,8 @@
 // customising the .env file in your project's root folder.
 require('dotenv').config();
 
+console.log(process.env.ADMIN_ID);
+
 // Require keystone
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');

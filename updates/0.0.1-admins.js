@@ -9,7 +9,7 @@
 
 exports.create = {
 	User: [
-		{ 'name.first': 'Admin', 'name.last': 'User', 'email': 'kim.chanwoo@yahoo.com', 'password': '1234', 'isAdmin': true },
+		{ 'name.first': 'Admin', 'name.last': 'User', 'email': process.env.ADMIN_ID, 'password': process.env.ADMIN_PW, 'isAdmin': true },
 	],
 };
 
