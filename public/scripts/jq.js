@@ -10,60 +10,8 @@ $(window).resize(function(){
   bodyWidth = $(window).width();
 });
 
-var imagePoint = 1;
-setInterval(function(){
-  if(imagePoint == 1){
-    toSecondImageGallery();
-  }
-  if(imagePoint == 2){
-    toThirdImageGallery();
-  }
-  if(imagePoint == 3){
-    toFirstImageGallery();
-  }
-  imagePoint++;
-  if(imagePoint == 4){
-    imagePoint = 1;
-  }
-},8000);
-var once = 0;
 
-// setInterval(function(){
-//   if(once == 0){
-//     $('.firstimage').css('right','-100%');
-//   }else{
-//     $('.firstimage').css('right','0');
-//   }
-//   once++;
-//   if(once == 2){
-//     once = 0;
-//   }
-// },2000);
-// function toSecondImageGallery(){
-//   $('.secondimage').css('transition','right 2s ease-in-out');
-//   $('.secondimage').css('right','0');
-//
-//   $('.firstimage').css('right','100%');
-//
-//   $('.thirdimage').css('transition','right 0s ease-in-out');
-//   $('.thirdimage').css('right','-100%');
-// }
-// function toThirdImageGallery(){
-//   $('.thirdimage').css('transition','right 2s ease-in-out');
-//   $('.thirdimage').css('right','0');
-//   $('.secondimage').css('right','100%');
-//
-//   $('.firstimage').css('transition','right 0s ease-in-out');
-//   $('.firstimage').css('right','-100%');
-// }
-// function toFirstImageGallery(){
-//   $('.firstimage').css('transition','right 2s ease-in-out');
-//   $('.firstimage').css('right','0');
-//   $('.thirdimage').css('right','100%');
-//
-//   $('.secondimage').css('transition','right 0s ease-in-out');
-//   $('.secondimage').css('right','-100%');
-// }
+var once = 0;
 (function() {
   bodyWidth = $('body').width()
 

@@ -2,9 +2,6 @@
 // customising the .env file in your project's root folder.
 require('dotenv').config();
 
-console.log(process.env.ADMIN_ID);
-console.log(process.env.ADMIN_PW);
-
 // Require keystone
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
@@ -58,11 +55,43 @@ keystone.set('routes', require('./routes'));
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
 	galleries: 'galleries',
-	users: 'users'	// teammembers: 'teammembers'
+	users: 'users'
 });
 
 // Start Keystone to connect to your database and initialise the web server
 
 
 
-keystone.start();
+keystone.start({
+	onHttpServerCreated: function(){
+		const {mailing} = require('./utilserver/mail');
+		var socketIO = require('socket.io');
+		var io = socketIO(keystone.httpServer);
+		io.on('connection', (socket) => {
+			socket.on('contact-form-submit', (contactMessage)=>{
+		    socket.emit('contact-form-processing');
+		    mailing(
+		      contactMessage.name,
+		      contactMessage.email,
+		      contactMessage.subject,
+		      contactMessage.message
+		    ).then(()=>{
+		      socket.emit('contact-form-success');
+		    }).catch((error) => {
+		      socket.emit('contact-form-failure');
+		    });
+		  });
+		});
+	}
+});
+
+// const socketIO = require('socket.io');
+// const express = require('express');
+// const http = require('http');
+// var app = express();
+// var server = http.createServer(app);
+// var io = socketIO(server);
+//
+// io.on('connection', (socket) => {
+// 	console.log('connected');
+// });
