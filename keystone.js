@@ -3,6 +3,7 @@
 require('dotenv').config();
 
 console.log(process.env.ADMIN_ID);
+console.log(process.env.ADMIN_PW);
 
 // Require keystone
 var keystone = require('keystone');
