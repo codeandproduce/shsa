@@ -22,8 +22,6 @@
   .menu-button{
     display:inline-block;
   }
-
-
   .decolines{
     display:none;
   }
@@ -125,8 +123,8 @@
 }
 @media(max-width:400px){
   .one-link{
-    width:60vw !important;
-    height:60vw !important;
+    width:100% !important;
+    height:100% !important;
   }
   ul{
     margin-left:8vw;
@@ -136,8 +134,8 @@
     height:37vw !important;
   }
   .link-label{
-    padding-top:26vw;
-    font-size:20px;
+    padding-top: 15vw;
+font-size: 14px;
   }
 
 }

@@ -39,31 +39,31 @@ var once = 0;
 //     once = 0;
 //   }
 // },2000);
-function toSecondImageGallery(){
-  $('.secondimage').css('transition','right 2s ease-in-out');
-  $('.secondimage').css('right','0');
-
-  $('.firstimage').css('right','100%');
-
-  $('.thirdimage').css('transition','right 0s ease-in-out');
-  $('.thirdimage').css('right','-100%');
-}
-function toThirdImageGallery(){
-  $('.thirdimage').css('transition','right 2s ease-in-out');
-  $('.thirdimage').css('right','0');
-  $('.secondimage').css('right','100%');
-
-  $('.firstimage').css('transition','right 0s ease-in-out');
-  $('.firstimage').css('right','-100%');
-}
-function toFirstImageGallery(){
-  $('.firstimage').css('transition','right 2s ease-in-out');
-  $('.firstimage').css('right','0');
-  $('.thirdimage').css('right','100%');
-
-  $('.secondimage').css('transition','right 0s ease-in-out');
-  $('.secondimage').css('right','-100%');
-}
+// function toSecondImageGallery(){
+//   $('.secondimage').css('transition','right 2s ease-in-out');
+//   $('.secondimage').css('right','0');
+//
+//   $('.firstimage').css('right','100%');
+//
+//   $('.thirdimage').css('transition','right 0s ease-in-out');
+//   $('.thirdimage').css('right','-100%');
+// }
+// function toThirdImageGallery(){
+//   $('.thirdimage').css('transition','right 2s ease-in-out');
+//   $('.thirdimage').css('right','0');
+//   $('.secondimage').css('right','100%');
+//
+//   $('.firstimage').css('transition','right 0s ease-in-out');
+//   $('.firstimage').css('right','-100%');
+// }
+// function toFirstImageGallery(){
+//   $('.firstimage').css('transition','right 2s ease-in-out');
+//   $('.firstimage').css('right','0');
+//   $('.thirdimage').css('right','100%');
+//
+//   $('.secondimage').css('transition','right 0s ease-in-out');
+//   $('.secondimage').css('right','-100%');
+// }
 (function() {
   bodyWidth = $('body').width()
 
@@ -94,7 +94,7 @@ function toFirstImageGallery(){
 
 
 $(document).scroll(function(){
-  if(!gallery){
+  if(!gallery && !menuButtonClicked){
 
 
     $('.galleryitem').css('background-position','center '+(($(this).scrollTop()*0.4)-100)+'px');
