@@ -122,10 +122,6 @@
 
 }
 @media(max-width:400px){
-  .one-link{
-    width:100% !important;
-    height:100% !important;
-  }
   ul{
     margin-left:8vw;
   }
