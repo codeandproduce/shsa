@@ -17,6 +17,22 @@
     z-index:-1;
     top:0;
   }
+  {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    -webkit-background-position: center;
+    -moz-background-position: center;
+    -o-background-position: center;
+    background-position: center;
+
+    -webkit-background-attachment: fixed;
+    -moz-background-attachment: fixed;
+    -o-background-attachment: fixed;
+    background-attachment: fixed;
+}
 </style>
 <div id="mycarousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
@@ -31,6 +47,7 @@
     </div>
   </div>
 </div>
+
 <script>
   var $item = $('.carousel .item');
   var $wHeight = $(window).height();
