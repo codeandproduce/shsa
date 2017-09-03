@@ -103,10 +103,6 @@
     font-size: 18px;
   }
 
-  .mission-img{
-    width:250px;
-    height:250px;
-  }
   .mission-statement-p{
     padding:0 10%;
     font-size:15px;
@@ -148,4 +144,10 @@
 font-size: 14px;
   }
 
+  .mission-img{
+    width:400px;
+    height:auto;
+    margin-top:100px;
+    margin-bottom:60px;
+  }
 }
