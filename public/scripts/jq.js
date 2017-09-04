@@ -63,6 +63,8 @@ $(document).scroll(function(){
       $('.what-we-do-des').css('margin-top','50px');
     }
 }
+// $('#mycarousel').css('position','fixed');
+// $('#mycarousel').css('top',''+(($(this).scrollTop()*0.1))+'px');
 });
 
 var menuButtonClicked = false;
