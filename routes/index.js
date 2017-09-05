@@ -35,6 +35,7 @@ var routes = {
 exports = module.exports = function (app) {
 	// Views
 	app.get('/', routes.views.index);
+	app.get('/cn', routes.views.cnindex);
 	app.get('/gallery', routes.views.gallery);
 	app.get('/connect', routes.views.connect);
 	app.get('/team',routes.views.team);

@@ -344,6 +344,22 @@ module.exports = function () {
 		// console.log(input[0].images[0].url);
 		console.log(input);
 	}
+	_helpers.evenArray = function(input){
+		var filtered = input.filter(function(el, index) {
+    // normally even numbers have the feature that number % 2 === 0;
+    // JavaScript is, however, zero-based, so want those elements with a modulo of 1:
+    	return index % 2 === 1;
+		});
+		return filtered
+	}
+	_helpers.oddArray = function(input){
+		var filtered = input.filter(function(el, index) {
+		// normally even numbers have the feature that number % 2 === 0;
+		// JavaScript is, however, zero-based, so want those elements with a modulo of 1:
+			return index % 2 === 0;
+		});
+		return filtered
+	}
 	_helpers.howManyInGallery = function(images){
 		return images.length;
 	}
