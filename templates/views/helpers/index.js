@@ -334,14 +334,6 @@ module.exports = function () {
 		return images[0].url;
 	}
 	_helpers.console = function(input) {
-		// for (var i=0, l=arr.length; i<l; i++) {
-		//   console.log(arr[i]);
-		// }
-		// var arr = input[0].images;
-		// for(var index1=0; index1<arr.length; index1++){
-		// 	console.log(arr[index1].url);
-		// }
-		// console.log(input[0].images[0].url);
 		console.log(input);
 	}
 	_helpers.evenArray = function(input){

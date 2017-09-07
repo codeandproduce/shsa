@@ -11,14 +11,23 @@ Team.add({
     required: true,
     index:true
   },
+  nameChinese:{
+    type:String
+  },
   position:{
     type: String
+  },
+  positionChinese:{
+    type:String
   },
   image:{
     type: Types.CloudinaryImage
   },
   description:{
     type: String
+  },
+  descriptionChinese:{
+    type:String
   }
 });
 

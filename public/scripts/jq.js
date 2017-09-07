@@ -90,15 +90,3 @@ $('.menu-button').click(function(){
   }
 
 });
-$('#memories-link').click(function(){
-  window.location.pathname = '/gallery';
-});
-$('#team-link').click(function(){
-  window.location.pathname = '/team';
-});
-$('#connect-link').click(function(){
-  window.location.pathname = '/connect';
-});
-$('#comics-link').click(function(){
-  window.location.pathname = '/comics';
-});

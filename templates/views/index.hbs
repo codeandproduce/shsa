@@ -1,20 +1,5 @@
 {{!< default}}
-<div class="contain-menu">
-	<div class="contain-menu-contain">
-		<div class="contain-menu-link">
-			<a href="/gallery">Memories</a>
-		</div>
-		<div class="contain-menu-link">
-			<a href="/team">Our Team</a>
-		</div>
-		<div class="contain-menu-link">
-			<a href="/connect">Connect</a>
-		</div>
-		<div class="contain-menu-link">
-			<a href="/comics">SHSA Comics</a>
-		</div>
-	</div>
-</div>
+
 <div class="contain">
 <style>
 	.full-screen {
@@ -73,9 +58,19 @@
 	interval: 6000,
 	pause: "false"
 	});
+	$('#memories-link').click(function(){
+	  window.location.pathname = '/gallery';
+	});
+	$('#team-link').click(function(){
+	  window.location.pathname = '/team';
+	});
+	$('#connect-link').click(function(){
+	  window.location.pathname = '/connect';
+	});
+	$('#comics-link').click(function(){
+	  window.location.pathname = '/comics';
+	});
 </script>
-
-
 	<div class="logo-container">
 		<div class="blue-tint"></div>
 		<h1 class="logo-heading"><strong class="emphasize-letters">S</strong>HANGHAI <strong class="emphasize-letters">H</strong class="emphasize-letters">IGH-SCHOOL</h1>

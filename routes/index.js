@@ -38,6 +38,7 @@ exports = module.exports = function (app) {
 	app.get('/cn', routes.views.cnindex);
 	app.get('/gallery', routes.views.gallery);
 	app.get('/connect', routes.views.connect);
+	app.get('/cn/team', routes.views.cnteam);
 	app.get('/team',routes.views.team);
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
