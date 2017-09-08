@@ -1,6 +1,93 @@
 {{!< default}}
+<div class="nav">
+	<style>
+		.nav-logo > a > img{
+			height:50px;
+			width:auto;
+		}
+		.nav-logo{
+			margin-top:25px;
+		}
 
+		.main-contain{
+			padding-bottom:130px;
+			background-color:white;
+		}
+	</style>
+	<div class="nav-logo">
+		<a href="/"><img src="/img/logonav.png" /></a>
+	</div>
+	<script>
+	$(document).ready(function(){
+		if($('body').width() < 650){
+			$('.nav-logo img').attr('src','/img/smalllogonav.png');
+		}
+
+		if($('body').width() <= 400){
+			$('.nav-logo').css('margin-top','11px');
+		}else{
+			$('.nav-logo').css('margin-top','25px');
+		}
+	});
+	$(window).resize(function(){
+		if($('body').width() < 650){
+			$('.nav-logo img').attr('src', '/img/smalllogonav.png');
+		}else{
+			$('.nav-logo img').attr('src', '/img/logonav.png');
+		}
+
+		if($('body').width() <= 400){
+			$('.nav-logo').css('margin-top','11px');
+		}else{
+			$('.nav-logo').css('margin-top','25px');
+		}
+	});
+	</script>
+	<div class="nav-links">
+		<a href="/gallery">Memories</a>
+		<a href="/team">Our Team</a>
+		<a href="/connect">Connect</a>
+		<a href="/videos">SHSA Videos</a>
+	</div>
+	<div class="menu-button">
+		<span class="one-menu"></span>
+		<span class="one-menu"></span>
+		<span class="one-menu"></span>
+	</div>
+</div>
+<div class="contain-menu">
+	<div class="contain-menu-contain">
+		<div class="contain-menu-link">
+			<a href="/gallery">Memories</a>
+		</div>
+		<div class="contain-menu-link">
+			<a href="/team">Our Team</a>
+		</div>
+		<div class="contain-menu-link">
+			<a href="/connect">Connect</a>
+		</div>
+		<div class="contain-menu-link">
+			<a href="/videos">SHSA Videos</a>
+		</div>
+	</div>
+</div>
 <div class="contain">
+	<div class="contain-menu">
+		<div class="contain-menu-contain">
+			<div class="contain-menu-link">
+				<a href="/gallery">Memories</a>
+			</div>
+			<div class="contain-menu-link">
+				<a href="/team">Our Team</a>
+			</div>
+			<div class="contain-menu-link">
+				<a href="/connect">Connect</a>
+			</div>
+			<div class="contain-menu-link">
+				<a href="/videos">SHSA Videos</a>
+			</div>
+		</div>
+	</div>
 <style>
 	.full-screen {
 	  background-size: cover;

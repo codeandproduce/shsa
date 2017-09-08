@@ -1,6 +1,79 @@
 {{!< default}}
+<div class="nav">
+	<style>
+		.nav-logo > a > img{
+			height:50px;
+			width:auto;
+		}
+		.nav-logo{
+			margin-top:25px;
+		}
 
+		.main-contain{
+			padding-bottom:130px;
+			background-color:white;
+		}
+	</style>
+	<div class="nav-logo">
+		<a href="/"><img src="/img/logonav.png" /></a>
+	</div>
+	<script>
+	$(document).ready(function(){
+		if($('body').width() < 650){
+			$('.nav-logo img').attr('src','/img/smalllogonav.png');
+		}
+
+		if($('body').width() <= 400){
+			$('.nav-logo').css('margin-top','11px');
+		}else{
+			$('.nav-logo').css('margin-top','25px');
+		}
+	});
+	$(window).resize(function(){
+		if($('body').width() < 650){
+			$('.nav-logo img').attr('src', '/img/smalllogonav.png');
+		}else{
+			$('.nav-logo img').attr('src', '/img/logonav.png');
+		}
+
+		if($('body').width() <= 400){
+			$('.nav-logo').css('margin-top','11px');
+		}else{
+			$('.nav-logo').css('margin-top','25px');
+		}
+	});
+	</script>
+	<div class="nav-links">
+		<a href="/gallery">记忆</a>
+		<a href="/team">Our Team</a>
+		<a href="/connect">联系</a>
+		<a href="/videos">视频</a>
+	</div>
+	<div class="menu-button">
+		<span class="one-menu"></span>
+		<span class="one-menu"></span>
+		<span class="one-menu"></span>
+	</div>
+</div>
+<div class="contain-menu">
+</div>
 <div class="contain">
+	<div class="contain-menu">
+		<div class="contain-menu-contain">
+			<div class="contain-menu-link">
+				<a href="/gallery">记忆</a>
+			</div>
+			<div class="contain-menu-link">
+				<a href="/team">Our Team</a>
+			</div>
+			<div class="contain-menu-link">
+				<a href="/connect">联系</a>
+			</div>
+			<div class="contain-menu-link">
+				<a href="/videos">视频</a>
+			</div>
+		</div>
+	</div>
 <style>
 	.full-screen {
 	  background-size: cover;
@@ -83,7 +156,7 @@
 		<ul>
 			<li class="link-li first-link">
 				<div id="memories-link" class="one-link">
-					<h2 class="link-label">MEMORIES</h2>
+					<h2 class="link-label">记忆</h2>
 				</div>
 			</li>
 			<li class="link-li second-link">
@@ -93,12 +166,12 @@
 			</li>
 			<li class="link-li third-link">
 				<div id="connect-link" class="one-link">
-					<h2 class="link-label">CONNECT</h2>
+					<h2 class="link-label">联系</h2>
 				</div>
 			</li>
 			<li id="videos-link" class="link-li fourth-link">
 				<div class="one-link">
-					<h2 class="link-label fourth-label">SHSA VIDEOS</h2>
+					<h2 class="link-label fourth-label">视频</h2>
 				</div>
 			</li>
 		</ul>
