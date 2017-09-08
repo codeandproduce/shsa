@@ -2,7 +2,7 @@ var keystone = require('keystone');
 
 
 var ChineseMissionStatement = new keystone.List('Chinese Mission Statement', {
-  autokey: { from: 'missionTitle', path: 'key' }
+  autokey: { from: 'missionTitle', path: 'key', unique:true }
 });
 
 ChineseMissionStatement.add({

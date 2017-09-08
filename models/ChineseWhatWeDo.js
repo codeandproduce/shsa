@@ -1,7 +1,7 @@
 var keystone = require('keystone');
 
 var ChineseWhatWeDo = new keystone.List('Chinese What We Do', {
-  autokey: { from: 'heading', path: 'key', unique: true }
+  autokey: { from: 'title', path: 'key', unique: true }
 });
 
 ChineseWhatWeDo.add({
