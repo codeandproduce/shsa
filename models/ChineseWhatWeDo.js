@@ -5,7 +5,7 @@ var ChineseWhatWeDo = new keystone.List('Chinese What We Do', {
 });
 
 ChineseWhatWeDo.add({
-  heading:{
+  title:{
     type: String,
     required: true,
     index: true,
