@@ -9,7 +9,8 @@ ChineseMissionStatement.add({
   missionTitle: {
     type: String,
     required: true,
-    index:true
+    index:true,
+    initial:true
   },
   text:{
     type:String
